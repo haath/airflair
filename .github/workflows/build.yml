@@ -1,3 +1,7 @@
+name: build
+
+on: push
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -7,5 +11,5 @@ jobs:
           haxe-version: 4.3.6
       - run: |
           haxe -version
-          haxelib install --always build-cpp.hxml
-          haxe build-cpp.hxml
+          haxelib install --always build.hxml
+          haxe build.hxml

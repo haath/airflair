@@ -1,21 +1,33 @@
 # airflair
 
+![screencap](img/screencap.png)
 
-
-# Dates
+## Dates
 
 The following date formats are supported:
 
-* YYYY-MM-DD
-* DD.MM (current year)
-* YYYYMMDD
-* DD.MM.YYYY
-* MM-DD (current year)
-* DD/MM/YYYY
-* DD/MM (current year)
+* `YYYY-MM-DD`
+* `DD.MM` (current year)
+* `YYYYMMDD`
+* `DD.MM.YYYY`
+* `MM-DD` (current year)
+* `DD/MM/YYYY`
+* `DD/MM` (current year)
 
 
-# Examples
+## Currencies
+
+The default currency is USD.
+
+To change the currency used set the following two environment variables:
+
+- `AIRFLAIR_DEFAULT_CURRENCY`: set to one of the supported currencies
+  - USD
+  - EUR
+- `FREECURRENCYAPI_KEY`: an API key for [freecurrencyapi.com](https://freecurrencyapi.com/) (free)
+
+
+## Examples
 
 One-way trips from Amsterdam to Athens in the first two weeks of March
 
