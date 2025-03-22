@@ -6,10 +6,19 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: krdlab/setup-haxe@v1
+      - name: checkout
+        uses: actions/checkout@v4
+
+      - name: setup haxe
+        uses: krdlab/setup-haxe@v1
         with:
           haxe-version: 4.3.6
-      - run: |
-          haxe -version
-          haxelib install --always build.hxml
-          haxe build.hxml
+
+      - name: print haxe version
+        run: haxe -version
+
+      - name: fetch haxelib deps
+        run: haxelib install --always build.hxml
+
+      - name: build
+        run: haxe build.hxml

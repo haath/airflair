@@ -1,6 +1,15 @@
 # airflair
 
+Airflair is a tool which considerably streamlines searching for airfare.
+
 ![screencap](img/screencap.png)
+
+Specifically, it enables searching in a variety of ways which are either too cumbersome or impossible to do with conventional too such as Google Flights, Skyscanner etc.
+
+- One-way flights over a range of dates.
+- Round-trip flights over a range of departure dates and a range of return dates.
+- Multi-leg trips, where multiple destinations can be chained, staying at each one for a number of days.
+
 
 ## Dates
 
