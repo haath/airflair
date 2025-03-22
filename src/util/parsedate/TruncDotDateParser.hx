@@ -1,0 +1,34 @@
+package util.parsedate;
+
+import types.ShortDate;
+
+
+class TruncDotDateParser implements ShortDateParser
+{
+    public function new()
+    {
+    }
+
+    public function parse(str: String): Null<ShortDate>
+    {
+        var expr: EReg = ~/^(\d\d)\.(\d\d)/;
+        return
+            if (expr.match(str))
+            {
+                {
+                    year: Date.now().getFullYear(),
+                    month: Std.parseInt(expr.matched(2)) - 1,
+                    date: Std.parseInt(expr.matched(1)),
+                };
+            }
+            else
+            {
+                null;
+            }
+    }
+
+    public function description(): String
+    {
+        return 'MM-DD (current year)';
+    }
+}

@@ -1,0 +1,30 @@
+{
+    "files.trimTrailingWhitespace": true,
+    "[haxe]": {
+        "editor.formatOnPaste": true,
+        "editor.formatOnSave": true,
+        "editor.inlayHints.enabled": "off",
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": "explicit"
+        }
+    },
+    "haxe.codeGeneration": {
+        "functions": {
+            "field": {
+                "placeOpenBraceOnNewLine": true
+            },
+            "anonymous": {
+                "useArrowSyntax": true
+            }
+        },
+        "imports": {
+            "enableAutoImports": true
+        },
+        "switch": {
+            "parentheses": false
+        }
+    },
+    "codedox": {
+        "commentdescription": "[Description]\n"
+    }
+}

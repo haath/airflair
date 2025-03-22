@@ -1,0 +1,31 @@
+when:
+  - event: push
+
+steps:
+  - name: build-hl
+    image: haxe:4.3-bullseye
+    commands:
+      - haxelib install --always build.hxml
+      - haxe build.hxml
+
+  - name: build-cpp
+    image: haxe:4.3-bullseye
+    commands:
+      # install dependencies
+      - apt-get update -yqq
+      - apt-get install -yqq build-essential g++
+      # build app
+      - haxelib install --always build-cpp.hxml
+      - haxe build-cpp.hxml
+      - ./bin/cpp/flights-cli --help || true
+
+  - name: release
+    image: git.gmantaos.com/haath/tools
+    environment:
+      FORGEJO_API_KEY:
+        from_secret: FORGEJO_API_KEY
+    commands:
+      - cd bin
+      - delete_package haath/flights-cli v1 || true
+      - push_package haath/flights-cli v1 cpp/flights-cli
+      - push_package haath/flights-cli v1 flights-cli.hl

@@ -1,0 +1,9 @@
+
+--class-path src
+--main Main
+
+--library hxargs
+
+--each
+--neko bin/airflair.n
+

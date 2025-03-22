@@ -1,0 +1,12 @@
+
+build.hxml
+
+--next
+
+--library hxcpp
+
+-D analyzer-optimize
+-D dce=full
+
+-D HAXE_OUTPUT_FILE=airflair
+--cpp bin/cpp

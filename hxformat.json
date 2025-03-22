@@ -1,0 +1,78 @@
+{
+    "indentation": {
+        "character": "    ",
+        "indentObjectLiteral": false,
+        "indentCaseLabels": true,
+        "indentComplexValueExpressions": true
+    },
+    "lineEnds": {
+        "leftCurly": "both",
+        "emptyCurly": "break",
+        "caseColon": "after"
+    },
+    "emptyLines": {
+        "classEmptyLines": {
+            "betweenFunctions": 2,
+            "afterPrivateFunctions": 2,
+            "afterStaticFunctions": 2,
+            "afterStaticVars": 1,
+            "betweenStaticFunctions": 2,
+            "betweenStaticVars": 0,
+            "afterVars": 2,
+            "betweenVars": 0,
+            "afterPrivateVars": 2
+        },
+        "importAndUsing": {
+            "betweenImportsLevel": "firstLevelPackage",
+            "betweenImports": 0,
+            "beforeUsing": 1,
+            "beforeType": 2
+        },
+        "maxAnywhereInFile": 2
+    },
+    "whitespace": {
+        "colonPolicy": "after",
+        "objectFieldColonPolicy": "after",
+        "caseColonPolicy": "after",
+        "typeHintColonPolicy": "after",
+        "typeCheckColonPolicy": "after"
+    },
+    "sameLine": {
+        "doWhile": "next",
+        "anonFunctionBody": "next",
+        "caseBody": "next",
+        "functionBody": "next",
+        "untypedBody": "next",
+        "expressionCase": "next",
+        "catchBody": "next",
+        "comprehensionFor": "next",
+        "doWhileBody": "next",
+        "elseBody": "next",
+        "elseIf": "same",
+        "expressionIf": "next",
+        "expressionIfWithBlocks": true,
+        "expressionTry": "next",
+        "forBody": "next",
+        "ifBody": "next",
+        "ifElse": "next",
+        "returnBody": "next",
+        "tryBody": "next",
+        "tryCatch": "next",
+        "whileBody": "next"
+    },
+    "wrapping": {
+        "callParameter": {
+            "rules": [
+                {
+                    "type": "onePerLine",
+                    "conditions": [
+                        {
+                            "cond": "exceedsMaxLineLength"
+                        }
+                    ]
+                }
+            ]
+        },
+        "maxLineLength": 160
+    }
+}
