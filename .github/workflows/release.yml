@@ -21,14 +21,14 @@ jobs:
         run: haxe -version
 
       - name: fetch haxelib deps
-        run: haxelib install --always build-cpp.hxml
+        run: haxelib install --always build.hxml
 
       - name: build
-        run: haxe build-cpp.hxml
+        run: haxe build.hxml
 
       - name: release
         uses: softprops/action-gh-release@v2
         env:
           GITHUB_TOKEN: ${{ secrets.RELEASE_PAT }}
         with:
-          files: bin/cpp/airflair
+          files: bin/airflair

@@ -1,5 +1,5 @@
 #!/bin/sh
 
-haxe build-cpp.hxml
+haxe build.hxml
 
-sudo cp bin/cpp/airflair /usr/local/bin/
+sudo cp bin/airflair /usr/local/bin/

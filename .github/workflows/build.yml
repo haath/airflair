@@ -18,7 +18,7 @@ jobs:
         run: haxe -version
 
       - name: fetch haxelib deps
-        run: haxelib install --always build.hxml
+        run: haxelib install --always build-neko.hxml
 
       - name: build
-        run: haxe build.hxml
+        run: haxe build-neko.hxml
