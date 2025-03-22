@@ -37,6 +37,8 @@ class FlightsCli
     var printCount: Int = 10;
     var detailed: Bool = false;
     var verbose: Bool = false;
+    var version: Bool = false;
+
     var nofThreads: Int = 10;
     var preliminary: Bool = false;
     var printDayOfWeek: Bool = false;
@@ -215,6 +217,12 @@ class FlightsCli
                 verbose = true;
             },
 
+            @doc("Print the version and exit.")
+            ["--version"] => () ->
+            {
+                version = true;
+            },
+
             @doc("Print this help message and exit.")
             ["-h", "--help"] => () ->
             {
@@ -237,6 +245,12 @@ class FlightsCli
             {
                 Sys.println(hint.toString());
             }
+            Sys.exit(0);
+        }
+
+        if (version)
+        {
+            Sys.println(Macro.getVersion());
             Sys.exit(0);
         }
 
